@@ -1,0 +1,218 @@
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  }
+a{
+    color: #CC835C;
+  }
+  .btn-round {
+    border-radius: 25px;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+img{
+max-width:100%;
+}
+
+  h1 {
+      font-size: 35px;
+      font-weight: 600;
+      margin-bottom: 15px;
+  }
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+  h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+#main-banner{
+  background-image: url('../images/banner-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+  position: relative;
+  background-position: top;
+}
+#main-banner:before{
+  background-color: rgba(29, 29, 29, 0.5);
+  width: 100%;
+  height: 100%;
+  top:0;
+  content: "";
+  position: absolute;
+  display: block;
+}
+#second-section{
+  margin: 60px 0;
+}
+#third-section{
+  background-color: #FBF8F5;
+  position: relative;
+    padding: 60px 0;
+}
+.third-section-bg{
+  background-image: url(../images/third-section-bg.jpg);
+  background-position: center;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#fourth-section{
+  padding: 80px 0;
+}
+#fifth-section{
+  padding: 60px 0;
+  position: relative;
+  background-color: #FBF8F5;
+}
+.fifth-section-bg{
+  background-image: url(../images/fifth-section-bg.jpg);
+  background-position: right;
+  background-position: top;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#sixth-section{
+  padding: 60px 0px;
+  background-color: #EEE2D7;
+}
+#seventh-section{
+  padding: 80px 0;
+  background-color: #FBF8F5;
+}
+#seventh-section p{
+  color: #CC835C;
+}
+
+#eighth-section{
+    padding: 60px 0;
+    position: relative;
+}
+.eighth-section-bg{
+  background-image: url(../images/eighth-section-bg.jpg);
+  background-position: center;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#ninth-section{
+  background-color: #EEE2D7;
+  padding: 80px 0;
+}
+#tenth-section{
+  padding: 60px 0;
+  position: relative;
+  background-color: #FBF8F5;
+}
+.tenth-section-bg{
+  background-image: url(../images/tenth-section-bg.jpg);
+  background-position: right;
+  background-position: top;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#tenth-section p span{
+  color: #CC835C;
+}
+#eleventh-section{
+  background-color: #FBF8F5;
+  position: relative;
+}
+.eleventh-section-bg{
+  background-image: url(../images/eleventh-section-bg.jpg);
+  background-position: left;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#ninth-section p a{
+  color: #CC835C;
+}
+  #references-section {
+      padding: 80px 0;
+      font-size: 14px;
+  }
+.footer-links {
+  padding-top: 5px;
+  font-size: 12px;
+}
+@media only screen and (max-width: 767px) {
+  #third-section{
+        padding: 0;
+    position: relative;
+  }
+  .third-section-bg{
+    height: 300px !important;
+    width: 100%;
+    position: relative;
+  }
+  .eleventh-section-bg{
+    height: 300px;
+    width: 100%;
+    position: relative;
+  }
+  .fifth-section-bg{
+    height: 300px;
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+  #fifth-section{
+    padding: 0;
+    position: relative;
+  }
+  .fifth-section-content{
+    padding-top: 50px;
+  }
+  .eighth-section-bg{
+    height: 300px;
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+  #eighth-section{
+      padding-top: 0px;
+      position: relative;
+  }
+  .eighth-section-content{
+      padding-top: 50px;
+  }
+    .tenth-section-bg{
+    height: 300px;
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+    #tenth-section{
+    padding: 0;
+    position: relative;
+  }
+    .tenth-section-content{
+    padding-top: 50px;
+  }
+}
