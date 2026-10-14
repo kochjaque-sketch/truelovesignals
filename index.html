@@ -123,8 +123,8 @@
             <p> Now it's your turn. Give him enough space to feel comfortable while still letting him know you're interested.</p>
             <p>Any guy who truly wants a mature, real relationship will come around as soon as he sees there's nothing there to be afraid of.</p>
             <p> And any guy who's not ready for a real relationship wasn't the catch you thought he was, anyway!</p>
-            <p>Now, before you settle into "waiting mode," I'd like to share a shortcut that can pull him back and rekindle his passionate pursuit at lightening speed. </p>
-            <p>There's nothing wrong with being patient, but if you want to pour a little miracle grow on your relationship, here's what I recommend you do next...</p>
+            <p>Patience has its place. But before settling into "waiting mode," there's one more piece worth understanding.</p>
+            <p>It's about what many men are quietly looking for at this stage, and why it matters more than most people realize.</p>
           </div>
         </div>
       </div>
@@ -153,8 +153,12 @@
             <h3>And his favorite way to earn your respect?</h3>
             <p> He wants to be heroic. He wants to solve problems for you, come to your aid, and prove himself useful.</p>
             <p> It's not very romantic, but it's woven into the fabric of his DNA.</p>
-            <p>And that's why I've put together a video explaining this phenomenon further so you can tap into his hero instinct anytime you want, even if he's currently asking for space.</p>
-            <p><a href="https://3e796eybs36u9x1esfuaihlfbi.hop.clickbank.net" onclick="fbq('track', 'Lead');"><strong>Click here</strong></a> now to make this method yours before you forget and miss this opportunity to <a href="https://3e796eybs36u9x1esfuaihlfbi.hop.clickbank.net" onclick="fbq('track', 'Lead');"><strong>transform your luck with men.</strong></a></p>
+            <p>That's why there's a free video presentation that explains the Hero Instinct in more depth, and how it can be brought out naturally, without games or pressure.</p>
+            <p>A quick note before watching: it's a video, so it works best with the sound on and a few quiet minutes set aside. It builds step by step, so it makes the most sense watched all the way through. Near the end, it introduces the full program, His Secret Obsession, for anyone who wants to go deeper.</p>
+            <div class="cta-box">
+              <a class="cta-btn hop-link" href="https://3e796eybs36u9x1esfuaihlfbi.hop.clickbank.net" onclick="fbq('track', 'Lead');">Watch the Free Video Presentation &#9654;</a>
+              <p class="cta-note"><i>Opens the video on the official His Secret Obsession site.</i></p>
+            </div>
           </div>
         </div>
       </div>
@@ -178,6 +182,18 @@
         </div>
       </div>
     </div>
+    <div id="final-cta-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="cta-box">
+              <a class="cta-btn hop-link" href="https://3e796eybs36u9x1esfuaihlfbi.hop.clickbank.net" onclick="fbq('track', 'Lead');">Watch the Free Video Presentation &#9654;</a>
+              <p class="cta-note"><i>The video on the Hero Instinct, on the official His Secret Obsession site.</i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="lp-footer">
       <div class="container">
         <div class="row">
@@ -190,5 +206,20 @@
         </div>
       </div>
     </div>
+    <script>
+    // tid do ClickBank por anuncio: utm_content vem como "{{ad.name}}|{{ad.id}}" -> usa so o nome, alfanumerico, max 24
+    (function () {
+      var content = new URLSearchParams(window.location.search).get('utm_content');
+      if (!content) return;
+      var tid = content.split('|')[0].replace(/[^A-Za-z0-9]/g, '').slice(0, 24);
+      if (!tid) return;
+      var links = document.querySelectorAll('a.hop-link');
+      for (var i = 0; i < links.length; i++) {
+        var url = new URL(links[i].href);
+        url.searchParams.set('tid', tid);
+        links[i].href = url.toString();
+      }
+    })();
+    </script>
   </body>
 </html>
