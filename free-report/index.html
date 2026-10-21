@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <title>The Fascination Fix | True Love Signals</title>
+  <!-- Meta Pixel Code (only on the live domain, so previews and tests don't count) -->
+  <script>
+  if (/(^|\.)truelovesignals\.com$/.test(location.hostname)) {
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1757570588852875');
+  fbq('track', 'PageView');
+  }
+  </script>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+  <div id="main-banner" class="capture-banner">
+    <div class="container">
+      <div class="row text-white justify-content-center">
+        <div class="col-md-9 text-center">
+          <span class="report-badge">FREE REPORT</span>
+          <h1>The Fascination Fix</h1>
+          <p class="capture-subtitle">How to spark real interest in a man who says he's "not ready" for a relationship</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="second-section" class="capture-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-7 text-center">
+          <p>A short, free report from relationship coach James Bauer on how to fascinate a man who thinks he's "not ready," without games and without chasing.</p>
+          <form id="capture-form" class="capture-form" action="/api/subscribe" method="POST" novalidate>
+            <label for="email" class="sr-only">Email</label>
+            <input type="email" id="email" name="email" class="form-control capture-input" placeholder="Your email address" autocomplete="email" required>
+            <input type="text" name="website" class="capture-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button type="submit" class="cta-btn capture-btn">Send Me the Free Report</button>
+            <p id="capture-error" class="capture-error" role="alert"></p>
+          </form>
+          <p class="cta-note">We'll email you the report, plus a few short relationship tips from True Love Signals. Unsubscribe anytime with one click. Your email is never shared.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="lp-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center pt-4 pb-4">
+          <p>© 2026 True Love Signals</p>
+          <div class="footer-links">
+            <a href="/contact.html">Contact Us</a> - <a href="/privacy.html">Privacy Policy</a> - <a href="/terms.html">Terms &amp; Conditions</a> - <a href="/disclosure.html">Affiliate Disclosure</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function () {
+    var form = document.getElementById('capture-form');
+    var input = document.getElementById('email');
+    var btn = form.querySelector('button');
+    var errorBox = document.getElementById('capture-error');
+    var messages = {
+      email: 'Please enter a valid email address.',
+      server: 'Something went wrong. Please try again in a moment.'
+    };
+
+    var initialError = new URLSearchParams(location.search).get('error');
+    if (messages[initialError]) errorBox.textContent = messages[initialError];
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = input.value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+        errorBox.textContent = messages.email;
+        input.focus();
+        return;
+      }
+      errorBox.textContent = '';
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, website: form.website.value })
+      })
+        .then(function (r) { return r.json().catch(function () { return {}; }); })
+        .then(function (data) {
+          if (!data.ok) throw new Error(data.error || 'server');
+          if (window.fbq) fbq('track', 'Lead');
+          // Short pause so the Lead event leaves before the page changes.
+          setTimeout(function () { location.href = '/thank-you'; }, 400);
+        })
+        .catch(function (err) {
+          errorBox.textContent = messages[err.message] || messages.server;
+          btn.disabled = false;
+          btn.textContent = 'Send Me the Free Report';
+        });
+    });
+  })();
+  </script>
+</body>
+</html>
